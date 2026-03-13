@@ -20,6 +20,7 @@ def print_header():
     print("           OPERATIONS MATHS             ")
     print("========================================")
 
+# Function to validate user input and calculate the account if the input is right
 def operation(operator, num_1, num_2):
 
     print(" > ", end="")
