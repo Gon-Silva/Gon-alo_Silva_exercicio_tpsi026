@@ -69,7 +69,7 @@ def main():
         print(f"\n{Fore.MAGENTA} > {Fore.WHITE}Insert grade #{i + 1}")
         
         try: # If a user accidentally types a letter instead of a number, your program won't crash
-            grade = int(input(f"{Fore.BLUE} > {Fore.WHITE} "))
+            grade = float(input(f"{Fore.BLUE} > {Fore.WHITE} "))
             
             if 0 <= grade <= 10:
                 i = i + 1
@@ -83,7 +83,7 @@ def main():
 
     grade_average = average_grade(arr_grade, len(arr_grade))
 
-    print(f"\n{Fore.MAGENTA} > {Fore.WHITE}Average {grade_average}")
+    print(f"\n{Fore.MAGENTA} > {Fore.WHITE}Average: {grade_average}")
     approval_check(grade_average)
 
     print(" ")
