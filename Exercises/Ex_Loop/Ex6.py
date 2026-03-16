@@ -34,7 +34,7 @@ def print_header(choice):
     match choice:
         case 1:
             print("========================================")
-            print("     WRITE THE FIRST 10.000 NUMBERS     ")
+            print("       THE FIRST 10 PRIME NUMBERS       ")
             print("========================================")
 
 # Check if the number is prime or compound
