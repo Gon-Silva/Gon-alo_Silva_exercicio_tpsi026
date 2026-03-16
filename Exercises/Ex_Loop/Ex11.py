@@ -39,7 +39,6 @@ def print_header(choice):
 
 # Create the tree on the left
 def create_tree(number):
-    count = 1
     for i in range(1, number + 1):
         print(str(i)*i)
 
