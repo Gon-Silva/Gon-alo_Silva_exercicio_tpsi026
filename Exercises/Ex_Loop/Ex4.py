@@ -20,6 +20,8 @@ from colorama import Fore, Back, Style # Import the colorama library
     # readchar -> pip3 install readchar
     # colorama -> pip3 install reacolorama
 
+import math
+
 # Function to clean the console
 def clear_console():
     if platform.system() == "Windows":
@@ -38,16 +40,18 @@ def print_header(choice):
 # Check if the number is prime or compound
 def check_prime_number(number):
     if number <= 1:
-        return print(f"{Fore.MAGENTA} > {Fore.WHITE}The number, {Fore.BLUE}{number}{Fore.WHITE}, is compound")
-    
-    if number == 2 or number == 3:
-        return print(f"{Fore.MAGENTA} > {Fore.WHITE}The number, {Fore.BLUE}{number}{Fore.WHITE}, is prime")
-    
-    if number % 2 == 0 or number % 3 == 0:
-        return print(f"{Fore.MAGENTA} > {Fore.WHITE}The number, {Fore.BLUE}{number}{Fore.WHITE}, is compound")
-    
+        result = "compound"
+    elif number == 2 or number == 3:
+        result = "prime"
+    elif number % 2 == 0:
+        result = "compound"
+    else:
+        for i in range(3, math.isqrt(number) + 1, 2):
+            if number % i == 0:
+                result = "compound"
+                break
 
-    return print(f"{Fore.MAGENTA} > {Fore.WHITE}The number, {Fore.BLUE}{number}{Fore.WHITE}, is prime")
+    return print(f"{Fore.MAGENTA} > {Fore.WHITE}The number, {Fore.BLUE}{number}{Fore.WHITE}, is {result}")
 
 # Main Function
 def main():
