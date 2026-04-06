@@ -34,8 +34,7 @@ def check_input(message:str):
             return user_input, True
 
         except ValueError:
-            print(f"\n{Fore.MAGENTA} > {Fore.RED}{Style.BRIGHT}! MUST BE A NUMBER !{Style.RESET_ALL}{Fore.RESET}")
-            break_point()
+            notify_invalid_selection("! MUST BE A NUMBER !")
             return 0, False
 
 def check_range(max:int, min:int, input_user:int):
