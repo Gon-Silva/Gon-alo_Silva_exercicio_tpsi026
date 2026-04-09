@@ -107,7 +107,7 @@ def list_dictionary(dict_students :dict):
 
 def main():
 
-    # test dictonary
+    # test dictionary
     Students = {
         1: {"first name": "João", "last name": "Silva", "age": 18, "course": "CET"},
         2: {"first name": "Ana",  "last name": "Costa", "age": 20, "course": "CET"},
