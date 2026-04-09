@@ -18,5 +18,6 @@ def main():
 
     print(d)
     print(swap_dic(d))
+    
 if __name__ == "__main__":
     main()
